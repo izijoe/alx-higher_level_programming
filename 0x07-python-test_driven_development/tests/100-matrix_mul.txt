@@ -176,3 +176,41 @@ And not just any list of lists - they *must* be lists of  lists containing integ
 Finnaly the length of all rows in matrices ''m_a''and ''m_b'' should be equivalent Otherwife, a TypeError is raised.
 
 ::
+
+	>>> m_a = [
+	... [1, 2],
+	...[3, 4, 5]
+	... ]
+	>>> m_b = [
+	... [1, 2],
+	... [3, 4]
+	... ]
+	>>> print(matrix_mul(m_a, m_b))
+	Traceback (most recent call last):
+	TypeError: each row of m_a must should be of the same size
+
+::
+
+	>>> m_a = [
+    	... [1, 2],
+    	... [3, 4]
+    	... ]
+    	>>> m_b = [
+    	... [1, 2],
+    	... [3, 4, 5]
+    	... ]
+    	>>> print(matrix_mul(m_a, m_b))
+    	Traceback (most recent call last):
+    	TypeError: each row of m_b must should be of the same size
+
+
+::
+
+	>>> m_a = [
+    	... [1, 2],
+    	... [3, 4, 5]
+    	... ]
+    	>>> m_b = m_a
+    	>>> print(matrix_mul(m_a, m_b))
+    	Traceback (most recent call last):
+    	TypeError: each row of m_a must should be of the same size
